@@ -23,7 +23,7 @@ module.exports = class WayAFK {
     
     start() {
         // Load configuration from disk.
-        WayAFKConfig = Object.assign({}, WayAFKConfig, BdApi.loadData("WayAFK", "settings"));
+        WayAFKConfig = Object.assign({}, WayAFKConfig, BdApi.Data.load("WayAFK", "settings"));
         
         // Specify options (for abort controller) and interaction listener.
         let options = { signal: this.controller.signal };
@@ -95,7 +95,7 @@ module.exports = class WayAFK {
         timeoutInput.value = WayAFKConfig.timeout;
         timeoutInput.addEventListener("change", () => {
             WayAFKConfig.timeout = timeoutInput.value;
-            BdApi.saveData("WayAFK", "settings", WayAFKConfig);
+            BdApi.Data.save("WayAFK", "settings", WayAFKConfig);
         });
 
         panel.append(timeoutSetting);
