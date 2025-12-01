@@ -1,4 +1,6 @@
 # WayAFK
+Forked from [WayAFK](https://github.com/Colonial-Dev/WayAFK) to fix betterdiscord api changes.
+
 
 > **Note**: For a better Wayland experience, I now recommend [Vesktop](https://github.com/Vencord/Vesktop). Vesktop fixes not just AFK on Wayland, but also screensharing. It's also just nicer than BD, in my humble opinion.
 
